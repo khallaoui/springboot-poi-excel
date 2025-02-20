@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Add Fournisseur</title>
+</head>
+<body>
+  <h2>Add Fournisseur</h2>
+
+  <form action="/PostFournisseur" method="post" th:object="${fournisseur}">
+
+    <label for="nom">Nom:</label>
+    <input type="text" id="nom" name="nom" required><br>
+
+    <label for="prenom">Prénom:</label>
+    <input type="text" id="prenom" name="prenom" required><br>
+
+    <label for="telephone">Téléphone:</label>
+    <input type="number" id="telephone" name="telephone" required><br>
+
+    <label for="ville">Ville:</label>
+    <input type="text" id="ville" name="ville" required><br>
+
+    <label for="codeFournisseur">Code Fournisseur:</label>
+    <input type="text" id="codeFournisseur" name="codeFournisseur" required><br>
+
+    <label for="joursLivraison">Jours de Livraison:</label>
+    <input type="text" id="joursLivraison" name="joursLivraison" required><br>
+
+    <label for="dispJoursLivraison">Disponibilité des Jours de Livraison:</label>
+    <input type="checkbox" id="dispJoursLivraison" name="dispJoursLivraison"><br>
+
+    <label for="maxDelaiLivraison">Délai de Livraison Maximum:</label>
+    <input type="number" id="maxDelaiLivraison" name="maxDelaiLivraison" required><br>
+
+    <label for="maxDelaiPaiement">Délai de Paiement Maximum:</label>
+    <input type="number" id="maxDelaiPaiement" name="maxDelaiPaiement" required><br>
+
+    <label for="maxQuantiteRecommandee">Quantité Recommandée Maximale:</label>
+    <input type="number" id="maxQuantiteRecommandee" name="maxQuantiteRecommande" step="0.01" required><br>
+
+    <label for="description">Description:</label>
+    <textarea id="description" name="description" required></textarea><br>
+
+    <label for="principal">Principal:</label>
+    <input type="checkbox" id="principal" name="principal"><br>
+
+    <label for="minQuantiteRecommandee">Quantité Recommandée Minimale:</label>
+    <input type="number" id="minQuantiteRecommandee" name="minQuantiteRecommande" step="0.01" required><br>
+	<tr><td colspan="2"><input type="submit" value="Ajouter" class="btn btn-primary" /></td></tr>
+  </form>
+</body>
+</html>
